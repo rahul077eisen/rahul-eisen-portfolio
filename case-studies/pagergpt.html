@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PagerGPT — Case Study · Rahul Eisen</title>
+<meta name="description" content="A no-code AI chatbot platform that actually resolves support. A product design case study by Rahul Eisen.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<style>
+  :root { --case-accent: #353CED; --case-accent-soft: #F2F3FF; }
+
+  /* ---- page-specific: 5-step "how it works" rail (no equivalent in shared CSS) ---- */
+  .case-flow-inline { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 24px 0; margin-top: 40px; }
+  .case-flow-inline__step { display: flex; flex-direction: column; width: 176px; }
+  .case-flow-inline__num {
+    width: 56px; height: 56px;
+    border: var(--border-w) solid var(--ink);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 1.4rem;
+    background: var(--case-accent-soft);
+    box-shadow: var(--shadow-hard-sm);
+    margin-bottom: 18px;
+  }
+  .case-flow-inline__step h3 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 8px; }
+  .case-flow-inline__step p { margin: 0; opacity: .8; font-size: .88rem; }
+  .case-flow-inline__arrow { width: 40px; align-self: center; margin: 0 0 90px; font-size: 1.4rem; opacity: .35; text-align: center; }
+
+  /* ---- page-specific: 4-up analytics highlight row ---- */
+  .case-highlight-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 40px; }
+  .case-highlight-grid h4 { font-family: var(--font-display); font-size: 1.05rem; margin: 0 0 10px; display: flex; align-items: center; gap: 8px; }
+  .case-highlight-grid h4::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--case-accent); display: inline-block; flex: none; }
+  .case-highlight-grid p { margin: 0; opacity: .8; font-size: .88rem; }
+
+  @media (max-width: 900px) {
+    .case-flow-inline { flex-direction: column; }
+    .case-flow-inline__arrow { display: none; }
+    .case-flow-inline__step { width: 100%; }
+    .case-highlight-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .case-highlight-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="case-body">
+
+<div class="grain"></div>
+
+<header class="case-navbar">
+  <div class="container case-navbar__inner">
+    <a href="../index.html#work" class="case-back">← Back to Portfolio</a>
+    <span class="case-navbar__name">PagerGPT</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="container">
+    <p class="case-hero__eyebrow">AI Support Automation · SaaS Platform</p>
+    <h1 class="case-hero__title">A no-code AI chatbot platform that actually resolves support.</h1>
+    <p class="case-hero__sub">PagerGPT lets any team train a chatbot on their own knowledge, deploy it across web, Slack and Teams, and hand off to humans when it matters — turning scattered help docs into answers in seconds.</p>
+
+    <dl class="case-meta-strip">
+      <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+      <div><dt>Timeline</dt><dd>2024 · 16 weeks</dd></div>
+      <div><dt>Platform</dt><dd>Web App (Desktop)</dd></div>
+      <div><dt>My Focus</dt><dd>UX · UI · Design System</dd></div>
+    </dl>
+
+    <div class="case-browser-frame" style="margin-top:56px;">
+      <div class="case-browser-frame__bar"><span></span><span></span><span></span></div>
+      <img src="../assets/case-studies/pagergpt/dashboard-hero.png" alt="PagerGPT dashboard screenshot showing total sessions, questions asked, answered and unanswered counts, a questions-over-time chart, top asked questions and a feedback breakdown">
+    </div>
+  </div>
+</section>
+
+<!-- 01 OVERVIEW -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">01 — Overview</p>
+    <p class="case-section__lede">Support teams are drowning in repetitive questions while the answers already exist — buried in help centres, PDFs and Slack threads. PagerGPT turns that scattered knowledge into a chatbot anyone can build in an afternoon, deploy anywhere, and trust to escalate to a human the moment it's out of its depth.</p>
+    <div class="case-two-col">
+      <p>As Lead Product Designer I shaped the full experience — from the training pipeline and live agent inbox to the analytics dashboard and the component system tying it all together.</p>
+      <p>The core tension: make something powerful enough for support ops, yet simple enough that a non-technical admin never feels they're "configuring an AI." Every screen had to disappear behind the task.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CHALLENGE -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">02 — The Challenge</p>
+    <h2 class="case-section__title">Great answers exist. Getting them to people doesn't.</h2>
+    <div class="case-card-row">
+      <div class="case-card">
+        <span class="case-card__num">01</span>
+        <h3>Knowledge is scattered</h3>
+        <p>Answers live across help centres, PDFs, wikis and Slack threads. Agents re-type the same replies all day while users never find the docs.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">02</span>
+        <h3>Bots feel like a downgrade</h3>
+        <p>Off-the-shelf chatbots are rigid and hard to train. They dead-end users instead of helping — so people learn to skip the bot and wait for a human.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">03</span>
+        <h3>No visibility into failure</h3>
+        <p>Teams can't see which questions go unanswered, where the bot breaks down, or what knowledge to add next. The loop never closes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DESIGN GOALS -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">03 — Design Goals</p>
+    <h2 class="case-section__title">Four principles the whole product answers to.</h2>
+    <div class="case-goal-list">
+      <div class="case-goal">
+        <span class="case-goal__num">01</span>
+        <h3>Training feels like uploading</h3>
+        <p>Point the bot at a URL, sitemap or file — no prompts, no code. Knowledge in, answers out.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">02</span>
+        <h3>Design for graceful handoff</h3>
+        <p>The bot knows its limits and passes to a human — with full context — the instant confidence drops.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">03</span>
+        <h3>Close the loop with insight</h3>
+        <p>Every unanswered question surfaces in analytics, so the knowledge base improves itself over time.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">04</span>
+        <h3>One system, every surface</h3>
+        <p>Web widget, Slack, Teams and the agent inbox all speak one visual and interaction language.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 HOW IT WORKS -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">04 — How It Works</p>
+    <h2 class="case-section__title">From scattered docs to resolved tickets — in five moves.</h2>
+
+    <div class="case-flow-inline">
+      <div class="case-flow-inline__step">
+        <span class="case-flow-inline__num">1</span>
+        <h3>Train</h3>
+        <p>Point it at URLs, sitemaps, files and apps.</p>
+      </div>
+      <div class="case-flow-inline__arrow">→</div>
+      <div class="case-flow-inline__step">
+        <span class="case-flow-inline__num">2</span>
+        <h3>Test</h3>
+        <p>Chat with the draft bot and refine its answers.</p>
+      </div>
+      <div class="case-flow-inline__arrow">→</div>
+      <div class="case-flow-inline__step">
+        <span class="case-flow-inline__num">3</span>
+        <h3>Deploy</h3>
+        <p>Ship to a web widget, Slack or Teams in one click.</p>
+      </div>
+      <div class="case-flow-inline__arrow">→</div>
+      <div class="case-flow-inline__step">
+        <span class="case-flow-inline__num">4</span>
+        <h3>Resolve</h3>
+        <p>It answers instantly, 24/7, with real context.</p>
+      </div>
+      <div class="case-flow-inline__arrow">→</div>
+      <div class="case-flow-inline__step">
+        <span class="case-flow-inline__num">5</span>
+        <h3>Learn</h3>
+        <p>Unanswered questions surface — you top up knowledge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 RESEARCH -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">05 — Research &amp; Insights</p>
+    <h2 class="case-section__title">What support teams told us reshaped the whole flow.</h2>
+    <div class="case-tag-row">
+      <span>Support-team interviews</span>
+      <span>Competitor teardown</span>
+      <span>Tree testing</span>
+      <span>Usability testing (training flow)</span>
+    </div>
+
+    <div class="case-insight">
+      <p class="case-insight__quote">"By the time I've explained the problem to the bot, I could've Googled it."</p>
+      <div class="case-insight__resolution">
+        <strong>Setup dies when it feels technical.</strong>
+        <p>So training became a 3-step wizard: add a source, auto-fetch, train — zero prompt engineering.</p>
+      </div>
+    </div>
+    <div class="case-insight">
+      <p class="case-insight__quote">"If the bot can't help, don't make me start over with a human."</p>
+      <div class="case-insight__resolution">
+        <strong>Broken handoffs destroy trust.</strong>
+        <p>So escalation carries the full transcript and user details straight into the agent inbox.</p>
+      </div>
+    </div>
+    <div class="case-insight">
+      <p class="case-insight__quote">"I honestly don't know what my bot is bad at."</p>
+      <div class="case-insight__resolution">
+        <strong>Teams fly blind on quality.</strong>
+        <p>So the dashboard leads with unanswered questions and feedback — not vanity session counts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 DESIGN SYSTEM -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">06 — Design System</p>
+    <h2 class="case-section__title">A crisp, geometric system tuned for dense product UI.</h2>
+    <p class="case-section__lede">A geometric display face carries personality; a neutral UI sans keeps data-heavy screens quiet. Electric indigo does the pointing; everything else gets out of the way.</p>
+
+    <div class="case-type-grid">
+      <div class="case-type-card">
+        <p class="case-aa" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700;">Aa</p>
+        <p class="case-font-name">Plus Jakarta Sans</p>
+        <p>Display &amp; headings — a geometric sans (standing in for the product's Euclid Circular B) that gives PagerGPT a modern, confident voice.</p>
+        <p class="case-glyphs">ABCDEFG · abcdefg · 0123456789</p>
+      </div>
+      <div class="case-type-card">
+        <p class="case-aa" style="font-family: 'Segoe UI', Arial, sans-serif;">Aa</p>
+        <p class="case-font-name">Inter</p>
+        <p>Body &amp; UI — a neutral workhorse that stays legible in tables, logs and dense dashboards without ever competing for attention.</p>
+        <p class="case-glyphs">ABCDEFG · abcdefg · 0123456789</p>
+      </div>
+    </div>
+
+    <p class="case-palette-label">Palette</p>
+    <div class="case-swatch-row">
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#353CED;"></div>
+        <div class="case-swatch__info"><strong>Primary</strong><span>#353CED</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#1A1A2E;"></div>
+        <div class="case-swatch__info"><strong>Ink</strong><span>#1A1A2E</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#FF7410;"></div>
+        <div class="case-swatch__info"><strong>Orange</strong><span>#FF7410</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#0085FF;"></div>
+        <div class="case-swatch__info"><strong>Link</strong><span>#0085FF</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#F2F3FF;"></div>
+        <div class="case-swatch__info"><strong>Tint</strong><span>#F2F3FF</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#DBDADA; border-right:none;"></div>
+        <div class="case-swatch__info"><strong>Border</strong><span>#DBDADA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PRODUCT SCREENS -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">07 — The Product</p>
+    <h2 class="case-section__title">A product that stays out of its own way.</h2>
+
+    <div class="case-screen-row">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">Train Your Bot</span>
+        <h3>No-code training that feels like uploading</h3>
+        <p>Add a website, sitemap, files or connected apps — PagerGPT fetches and indexes everything, shows a live character count, and trains in the background. The three-step rail keeps "what's next" obvious the whole way.</p>
+      </div>
+      <div class="case-browser-frame">
+        <div class="case-browser-frame__bar"><span></span><span></span><span></span></div>
+        <img src="../assets/case-studies/pagergpt/train.png" alt="PagerGPT bot training screen showing website URL and sitemap fetch, fetched URLs list and a live character count panel">
+      </div>
+    </div>
+
+    <div class="case-screen-row case-screen-row--reverse">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">Chat Logs</span>
+        <h3>Every conversation, searchable and scored</h3>
+        <p>A three-pane log pairs each transcript with rich context — channel, questions asked, bot answered vs. unanswered, feedback and escalation — so teams can audit quality at a glance and spot exactly where knowledge is missing.</p>
+      </div>
+      <div class="case-browser-frame">
+        <div class="case-browser-frame__bar"><span></span><span></span><span></span></div>
+        <img src="../assets/case-studies/pagergpt/chat-logs.png" alt="PagerGPT chat logs screen showing a chat list, a conversation transcript and a chat info panel with user, session and feedback details">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 DEEP DIVE ANALYTICS -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">08 — Deep Dive · Analytics</p>
+    <h2 class="case-section__title">The dashboard that closes the loop.</h2>
+    <p class="case-section__lede">Instead of vanity metrics, the home dashboard foregrounds what a support team can act on — what got asked, what went unanswered, and how people felt about the answer.</p>
+
+    <div class="case-browser-frame">
+      <div class="case-browser-frame__bar"><span></span><span></span><span></span></div>
+      <img src="../assets/case-studies/pagergpt/dashboard-analytics.png" alt="PagerGPT dashboard screenshot showing total sessions, questions asked, answered and unanswered counts, a questions-over-time chart, top asked questions and a feedback breakdown">
+    </div>
+
+    <div class="case-highlight-grid">
+      <div>
+        <h4>Resolution at a glance</h4>
+        <p>Sessions, asked, answered and unanswered — the four numbers that matter, up top.</p>
+      </div>
+      <div>
+        <h4>Trends over time</h4>
+        <p>A yearly question curve shows demand spikes so staffing and content can keep pace.</p>
+      </div>
+      <div>
+        <h4>Top asked questions</h4>
+        <p>The real backlog — the exact queries to turn into new knowledge next.</p>
+      </div>
+      <div>
+        <h4>Feedback split</h4>
+        <p>Helpful vs. not vs. escalated, so quality is a number, not a gut feeling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 TEST & DEPLOY -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">09 — Test &amp; Deploy</p>
+    <h2 class="case-section__title">Try it in a real chat — then ship in one click.</h2>
+
+    <div class="case-screen-row">
+      <div class="case-browser-frame">
+        <div class="case-browser-frame__bar"><span></span><span></span><span></span></div>
+        <img src="../assets/case-studies/pagergpt/test-deploy.png" alt="PagerGPT test-your-bot screen with a live chat preview, model selector and chatbot info panel showing trained status, web links and file counts">
+      </div>
+      <div class="case-poster-list">
+        <div class="case-poster-item">
+          <h3>See it before users do</h3>
+          <p>A live test chat runs the trained bot right inside the wizard — no staging, no guesswork.</p>
+        </div>
+        <div class="case-poster-item">
+          <h3>Choose the model</h3>
+          <p>Swap the underlying model (GPT-4o and others) from a dropdown — never a config file.</p>
+        </div>
+        <div class="case-poster-item">
+          <h3>Deploy anywhere</h3>
+          <p>One button pushes the same bot to a web widget, Slack or Microsoft Teams.</p>
+        </div>
+        <div class="case-tag-row" style="margin: 8px 0 0;">
+          <span>✓ Trained</span>
+          <span>100 web links</span>
+          <span>50 files</span>
+          <span>484,780 chars</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 OMNICHANNEL -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">10 — Omnichannel</p>
+    <h2 class="case-section__title">One bot, wherever your users already are.</h2>
+    <div class="case-card-row">
+      <div class="case-card">
+        <span class="case-card__num">W</span>
+        <h3>Web widget</h3>
+        <p>An embeddable, fully themeable widget — the familiar bottom-right helper that matches your site out of the box.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">S</span>
+        <h3>Slack</h3>
+        <p>Users ask in a DM or channel; the bot answers inline and escalates to your agents without leaving Slack.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">M</span>
+        <h3>Microsoft Teams</h3>
+        <p>The same trained bot inside Teams — so internal IT and HR support lives exactly where employees already work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 OUTCOMES -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">11 — Outcomes</p>
+    <h2 class="case-section__title">What good looks like once it's live.</h2>
+    <p class="case-note">Illustrative metrics — swap in real figures once you have them.</p>
+
+    <div class="case-stat-grid">
+      <div class="case-stat">
+        <strong>82%</strong>
+        <span>Auto-resolution rate</span>
+        <p>Questions answered end-to-end without a human agent.</p>
+      </div>
+      <div class="case-stat">
+        <strong>-55%</strong>
+        <span>Tickets to agents</span>
+        <p>Deflected by the bot across web, Slack and Teams.</p>
+      </div>
+      <div class="case-stat">
+        <strong>&lt;3s</strong>
+        <span>Median response</span>
+        <p>From a user's question to the first useful answer.</p>
+      </div>
+      <div class="case-stat">
+        <strong>4.5/5</strong>
+        <span>CSAT on bot replies</span>
+        <p>"Helpful" feedback averaged across live sessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 REFLECTION -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">12 — Reflection</p>
+    <h2 class="case-reflection-title">The hardest part of an AI product isn't the AI — it's earning enough trust that people let it try.</h2>
+    <div class="case-two-col">
+      <p>Restraint was the real design tool. The temptation with an LLM product is to expose every knob; the win was hiding almost all of them behind three verbs — train, test, deploy — so a non-technical admin ships a capable bot without ever feeling they're "configuring an AI."</p>
+      <p>Designing the failure path mattered as much as the happy path. The human-handoff flow and the unanswered-questions loop are what make the confident moments believable — they're the reason people keep trusting the bot instead of routing around it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="case-footer">
+  <div class="container">
+    <div class="case-footer__top">
+      <h3 class="case-footer__thanks">Thanks for reading.</h3>
+      <div class="case-footer__contact">
+        <span>Lead Product Designer</span>
+        <a href="mailto:rahul077eisen@gmail.com">rahul077eisen@gmail.com</a>
+      </div>
+    </div>
+    <div class="case-nav-footer">
+      <a href="../index.html#work" class="case-nav-footer__link">← Back to Portfolio</a>
+      <a href="discovgov.html" class="case-nav-footer__link">← Back: Discovgov</a>
+      <a href="plantd.html" class="case-nav-footer__link">Next: plantd →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

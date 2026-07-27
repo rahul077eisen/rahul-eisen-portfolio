@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>plantd — Case Study · Rahul Eisen</title>
+<meta name="description" content="Making climate action feel like a game you want to keep playing. A product design case study by Rahul Eisen.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<style>
+  :root { --case-accent: #4CB05A; --case-accent-soft: #E4F3E6; }
+</style>
+</head>
+<body class="case-body">
+
+<div class="grain"></div>
+
+<header class="case-navbar">
+  <div class="container case-navbar__inner">
+    <a href="../index.html#work" class="case-back">← Back to Portfolio</a>
+    <span class="case-navbar__name">plantd</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="container" style="display:grid; grid-template-columns: 1.3fr 0.7fr; gap:48px; align-items:start;">
+    <div>
+      <p class="case-hero__eyebrow">2024 · Product Design Case Study</p>
+      <p style="font-weight:700; text-transform:uppercase; letter-spacing:.08em; font-size:.8rem; opacity:.6; margin:0 0 16px;">Climate Action · Mobile App</p>
+      <h1 class="case-hero__title">Making climate action feel like a game you want to keep playing.</h1>
+      <p class="case-hero__sub">plantd turns carbon offsetting into a daily habit — grow a virtual forest with every action, offset real emissions across energy, flights and mobility, and earn real-world rewards for showing up.</p>
+
+      <dl class="case-meta-strip">
+        <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+        <div><dt>Timeline</dt><dd>2024 · 12 weeks</dd></div>
+        <div><dt>Platform</dt><dd>iOS · Android</dd></div>
+        <div><dt>My Focus</dt><dd>UX · UI · Gamification</dd></div>
+      </dl>
+    </div>
+    <div style="border: var(--border-w) solid var(--ink); border-radius: var(--radius); box-shadow: var(--shadow-hard-lg); overflow:hidden; max-width:280px; justify-self:end; background:#0B1210;">
+      <img src="../assets/case-studies/plantd/splash.png" alt="plantd splash screen with Start Your Journey call to action" style="display:block; width:100%;">
+    </div>
+  </div>
+</section>
+
+<!-- 01 OVERVIEW -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">01 — Overview</p>
+    <p class="case-section__lede">Climate guilt doesn't change behaviour — momentum does. plantd wraps real carbon offsetting inside a playful daily loop: check in, complete tasks, grow your forest, and watch individual actions add up to something you can actually see.</p>
+    <div class="case-two-col">
+      <p>As Lead Product Designer I designed the end-to-end experience across 97 screens — onboarding, the gamified home, the virtual forest, the offset purchase flow, rewards and payments — plus the visual system holding it together.</p>
+      <p>The brief was sharp: make sustainability feel rewarding rather than righteous. Every decision was tested against one question — would someone open this app on a random Tuesday?</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CHALLENGE -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">02 — The Challenge</p>
+    <h2 class="case-section__title">Everyone cares about the planet. Almost nobody acts weekly.</h2>
+    <div class="case-card-row">
+      <div class="case-card">
+        <span class="case-card__num">01</span>
+        <h3>Offsetting feels abstract</h3>
+        <p>You pay money, a PDF certificate appears, nothing changes. There's no feedback loop — so there's no habit.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">02</span>
+        <h3>Guilt is a terrible motivator</h3>
+        <p>Most climate apps lead with doom. People disengage from products that make them feel bad about themselves.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">03</span>
+        <h3>One-time, not every-time</h3>
+        <p>Even motivated users offset once and vanish. Without a reason to return, impact stays a single transaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DESIGN GOALS -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">03 — Design Goals</p>
+    <h2 class="case-section__title">Four bets the design makes.</h2>
+    <div class="case-goal-list">
+      <div class="case-goal">
+        <span class="case-goal__num">01</span>
+        <h3>Make impact visible</h3>
+        <p>Every seed, tree and tonne shows up somewhere you can point at — the forest is the progress bar.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">02</span>
+        <h3>Reward the streak, not the splurge</h3>
+        <p>Daily check-ins and turbo tasks earn more over time than one big purchase ever could.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">03</span>
+        <h3>Price the planet in taps</h3>
+        <p>Offsetting energy, flights or mobility takes four decisions — never a spreadsheet.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">04</span>
+        <h3>Let fun do the marketing</h3>
+        <p>Contests, giveaways and VIP experiences give people a selfish reason to do a selfless thing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 THE CORE LOOP -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">04 — The Core Loop</p>
+    <h2 class="case-section__title">One loop, played daily.</h2>
+
+    <div style="display:flex; align-items:stretch; gap:14px; margin-top:32px; flex-wrap:wrap;">
+      <div class="case-card" style="flex:1; min-width:180px;">
+        <span class="case-card__num">01</span>
+        <h3>Act</h3>
+        <p>Check in, complete turbo tasks, refer friends.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.6rem; color:var(--case-accent); padding:0 2px;">→</div>
+      <div class="case-card" style="flex:1; min-width:180px;">
+        <span class="case-card__num">02</span>
+        <h3>Earn</h3>
+        <p>Collect seeds and leaves — the app's currency.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.6rem; color:var(--case-accent); padding:0 2px;">→</div>
+      <div class="case-card" style="flex:1; min-width:180px;">
+        <span class="case-card__num">03</span>
+        <h3>Plant</h3>
+        <p>Seeds become trees in your virtual forest.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.6rem; color:var(--case-accent); padding:0 2px;">→</div>
+      <div class="case-card" style="flex:1; min-width:180px;">
+        <span class="case-card__num">04</span>
+        <h3>Offset</h3>
+        <p>Purchase verified offsets for real emissions.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:1.6rem; color:var(--case-accent); padding:0 2px;">→</div>
+      <div class="case-card" style="flex:1; min-width:180px;">
+        <span class="case-card__num">05</span>
+        <h3>Win</h3>
+        <p>Streaks unlock contests and VIP experiences.</p>
+      </div>
+    </div>
+    <p class="case-note" style="margin-top:24px;">…and the loop starts again tomorrow.</p>
+  </div>
+</section>
+
+<!-- 05 RESEARCH -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">05 — Research &amp; Insights</p>
+    <h2 class="case-section__title">We studied why green apps get deleted.</h2>
+    <div class="case-tag-row">
+      <span>User interviews</span>
+      <span>Habit-app teardown</span>
+      <span>Competitor audit</span>
+      <span>Prototype testing</span>
+    </div>
+
+    <div class="case-insight">
+      <p class="case-insight__quote">"I offset one flight once. I have no idea what happened after I paid."</p>
+      <div class="case-insight__resolution">
+        <strong>Impact needs a face.</strong>
+        <p>So every offset and seed materialises as a tree you can visit — personal and team forests make outcomes visceral.</p>
+      </div>
+    </div>
+    <div class="case-insight">
+      <p class="case-insight__quote">"Apps that lecture me get deleted first."</p>
+      <div class="case-insight__resolution">
+        <strong>Tone decides retention.</strong>
+        <p>So the voice is celebratory: streaks, confetti, contests — the app cheers you on instead of grading you.</p>
+      </div>
+    </div>
+    <div class="case-insight">
+      <p class="case-insight__quote">"I'll do the right thing if it's the easy thing."</p>
+      <div class="case-insight__resolution">
+        <strong>Friction kills good intentions.</strong>
+        <p>So the core actions — check in, offset, refer — each take under thirty seconds from a cold open.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 DESIGN SYSTEM -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">06 — Design System</p>
+    <h2 class="case-section__title">Dark like a forest at night, lit by one green.</h2>
+    <p class="case-section__lede">A near-black canvas makes photography, gold accents and the signature green glow. Poppins' geometric roundness keeps the dark UI friendly instead of severe.</p>
+
+    <div class="case-type-grid" style="grid-template-columns: 1fr; max-width: 504px;">
+      <div class="case-type-card">
+        <p class="case-aa" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight:600;">Aa</p>
+        <p class="case-font-name">Poppins</p>
+        <p>One family, three weights. Geometric, rounded, optimistic — it reads as friendly at 12px and confident at 40.</p>
+        <p class="case-glyphs">SemiBold · Medium · Regular — 0123456789</p>
+      </div>
+    </div>
+
+    <p class="case-palette-label">Palette</p>
+    <div class="case-swatch-row" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#0B1210;"></div>
+        <div class="case-swatch__info"><strong>Forest Night</strong><span>#0B1210</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#4CB05A;"></div>
+        <div class="case-swatch__info"><strong>Signature Green</strong><span>#4CB05A</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#FAFAF6;"></div>
+        <div class="case-swatch__info"><strong>Canvas</strong><span>#FAFAF6</span></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#E9B44C; border-right:none;"></div>
+        <div class="case-swatch__info"><strong>Seed Gold</strong><span>#E9B44C</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PRODUCT SCREENS -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">07 — The Product</p>
+    <h2 class="case-section__title">A home screen that behaves like a favourite game.</h2>
+
+    <div class="case-screen-row">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">Home</span>
+        <h3>Everything urgent in one scroll</h3>
+        <p>VIP experiences, live contests, turbo tasks and the daily check-in — ordered by excitement, not hierarchy charts.</p>
+      </div>
+      <div class="case-browser-frame" style="max-width:300px; margin:0 auto; background:#0B1210;">
+        <img src="../assets/case-studies/plantd/home.png" alt="plantd home screen with VIP experience, events and turbo tasks" style="max-height:640px; object-fit:cover;">
+      </div>
+    </div>
+
+    <div class="case-screen-row case-screen-row--reverse">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">Feeds</span>
+        <h3>A community that celebrates</h3>
+        <p>Winners, events and milestones flow through a feed that makes collective impact feel social, not solitary.</p>
+      </div>
+      <div class="case-browser-frame" style="max-width:300px; margin:0 auto; background:#0B1210;">
+        <img src="../assets/case-studies/plantd/feeds.png" alt="plantd feeds screen showing referral bonus activity" style="max-height:640px; object-fit:cover;">
+      </div>
+    </div>
+
+    <div class="case-screen-row">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">Profile</span>
+        <h3>Your impact, quantified</h3>
+        <p>Seeds, trees, offsets and streaks live on a profile that doubles as a scoreboard you're proud of.</p>
+      </div>
+      <div class="case-browser-frame" style="max-width:300px; margin:0 auto; background:#0B1210;">
+        <img src="../assets/case-studies/plantd/profile.png" alt="plantd profile screen with trees, referred and seeds stats" style="max-height:640px; object-fit:cover;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 DEEP DIVE: VIRTUAL FOREST -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">08 — Deep Dive · Virtual Forest</p>
+    <h2 class="case-section__title">The progress bar is a forest.</h2>
+
+    <div class="case-flow-layout">
+      <div class="case-flow-steps">
+        <div class="case-flow-step" style="grid-template-columns: 1fr;">
+          <div>
+            <h3>Every action grows something</h3>
+            <p>Seeds earned through check-ins and offsets become trees on an isometric plot that fills in over time.</p>
+          </div>
+        </div>
+        <div class="case-flow-step" style="grid-template-columns: 1fr;">
+          <div>
+            <h3>Personal and team views</h3>
+            <p>Switch between your own forest and your team's — gentle competition via a leaderboard of planters.</p>
+          </div>
+        </div>
+        <div class="case-flow-step" style="grid-template-columns: 1fr;">
+          <div>
+            <h3>Tied to real coordinates</h3>
+            <p>A location toggle anchors virtual trees to real planting projects, closing the believability gap.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; gap:16px;">
+        <div class="case-flow-image" style="flex:1;">
+          <img src="../assets/case-studies/plantd/forest-personal.png" alt="plantd personal virtual forest view with trees planted">
+        </div>
+        <div class="case-flow-image" style="flex:1;">
+          <img src="../assets/case-studies/plantd/forest-team.png" alt="plantd team virtual forest view with trees planted">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 FLOW SPOTLIGHT: OFFSET -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">09 — Flow Spotlight · Offset</p>
+    <h2 class="case-section__title">From footprint to funded project in four steps.</h2>
+    <p class="case-section__lede">Energy, flights, mobility or a custom amount — each category asks only what it must, shows the tonnes in plain numbers, and ends at a real, named project.</p>
+
+    <div class="case-community-grid" style="grid-template-columns: repeat(4, 1fr); gap:20px;">
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/offset-step1-footprint.png" alt="Step 1: see your carbon footprint screen"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Step 1</span>
+          <h4>See your footprint</h4>
+          <p>Your yearly tonnes, up front — no lecture attached.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/offset-step2-category.png" alt="Step 2: pick a category to calculate offset tons"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Step 2</span>
+          <h4>Pick a category</h4>
+          <p>Energy, flights, mobility or custom — sliders, not spreadsheets.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/offset-step3-project.png" alt="Step 3: choose an offset project screen"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Step 3</span>
+          <h4>Choose a project</h4>
+          <p>Verified planting and offset projects, each with a face and a place.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/offset-step4-checkout.png" alt="Step 4: checkout screen with payment options"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Step 4</span>
+          <h4>Checkout in a tap</h4>
+          <p>Saved cards or PayPal — then trees appear in your forest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 GROWTH & BUSINESS -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">10 — Growth &amp; Business</p>
+    <h2 class="case-section__title">Designed to spread — and to sustain itself.</h2>
+
+    <div class="case-community-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/refer-earn.png" alt="How referrals work screenshot showing referral tree"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Refer &amp; Earn</span>
+          <h4>Friends are the best fertiliser</h4>
+          <p>Referrals pay both sides in seeds — the growth loop is literally planted into the product.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/events-contests.png" alt="VIP experience winners list screenshot"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Events &amp; Contests</span>
+          <h4>Winning in public</h4>
+          <p>Winner lists and live contests give every campaign a scoreboard — and a reason to come back Friday.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/plantd/subscription.png" alt="Subscription plan selection screenshot"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Subscription</span>
+          <h4>The business model is a membership</h4>
+          <p>A simple subscription unlocks multipliers and VIP draws — revenue that scales with engagement, not ads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 OUTCOMES -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">11 — Outcomes</p>
+    <h2 class="case-section__title">Signals that the loop holds.</h2>
+    <p class="case-note">Illustrative metrics — swap in real figures once you have them.</p>
+
+    <div class="case-stat-grid">
+      <div class="case-stat">
+        <strong>41%</strong>
+        <span>D30 retention</span>
+        <p>Users still checking in a month after install.</p>
+      </div>
+      <div class="case-stat">
+        <strong>5.2</strong>
+        <span>Sessions / week</span>
+        <p>The loop reads as routine, not chore.</p>
+      </div>
+      <div class="case-stat">
+        <strong>2.8×</strong>
+        <span>Repeat offsets</span>
+        <p>Purchases per offsetting user in the first quarter.</p>
+      </div>
+      <div class="case-stat">
+        <strong>68%</strong>
+        <span>Joined via referral</span>
+        <p>Growth carried by the seed-sharing loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 REFLECTION -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">12 — Reflection</p>
+    <h2 class="case-reflection-title">Purpose gets people to download. Play gets them to stay.</h2>
+    <div class="case-two-col">
+      <p>Designing 97 screens taught me where gamification earns its keep and where it becomes noise. The forest worked because it's honest — a visualisation of real actions — while badges we prototyped and cut felt like decoration. If a game mechanic doesn't map to something true, it dilutes the ones that do.</p>
+      <p>The dark UI was a risk for an outdoors brand, and the answer was photography and glow: let real forests carry the colour, and reserve the green for action. Restraint made the product feel premium — which, for a subscription business, is the difference between a cause and a product people pay for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="case-footer">
+  <div class="container">
+    <div class="case-footer__top">
+      <h3 class="case-footer__thanks">Thanks for reading.</h3>
+      <div class="case-footer__contact">
+        <span>Lead Product Designer</span>
+        <a href="mailto:rahul077eisen@gmail.com">rahul077eisen@gmail.com</a>
+      </div>
+    </div>
+    <div class="case-nav-footer">
+      <a href="pagergpt.html" class="case-nav-footer__link">← Back: PagerGPT</a>
+      <a href="../index.html#work" class="case-nav-footer__link">← Back to Portfolio</a>
+      <a href="halo.html" class="case-nav-footer__link">Next: HALO →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

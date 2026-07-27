@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HALO — Case Study · Rahul Eisen</title>
+<meta name="description" content="A ring that watches over your health — and your back. A product design case study by Rahul Eisen.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css">
+<style>
+  :root { --case-accent: #4AC7E3; --case-accent-soft: #CCEFF7; }
+</style>
+</head>
+<body class="case-body">
+
+<div class="grain"></div>
+
+<header class="case-navbar">
+  <div class="container case-navbar__inner">
+    <a href="../index.html#work" class="case-back">← Back to Portfolio</a>
+    <span class="case-navbar__name">HALO</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:56px; align-items:center;">
+      <div>
+        <p class="case-hero__eyebrow">Smart Ring · Health + Personal Safety</p>
+        <h1 class="case-hero__title">A ring that watches over your health — and your back.</h1>
+        <p class="case-hero__sub">HALO is the companion app for a smart ring that tracks sleep, heart rate and cycles — and doubles as a personal safety device with one-touch SOS, fake calls and live incident recording.</p>
+      </div>
+      <div class="case-flow-image" style="max-width:280px; margin-left:auto;">
+        <img src="../assets/case-studies/halo/hero.png" alt="HALO brand splash — the HALO ring rendered in dark glass with a glowing teal thread">
+      </div>
+    </div>
+
+    <dl class="case-meta-strip">
+      <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+      <div><dt>Timeline</dt><dd>2025 · 10 weeks</dd></div>
+      <div><dt>Platform</dt><dd>iOS · Wearable</dd></div>
+      <div><dt>My Focus</dt><dd>UX · UI · Data Viz</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 01 OVERVIEW -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">01 — Overview</p>
+    <p class="case-section__lede">Wearables are great at telling you how you slept. HALO asks a bigger question: what if the same ring that reads your heart rate could also get you out of a dangerous situation? One device, one app — your wellbeing and your safety in a single glance.</p>
+    <div class="case-two-col">
+      <p>As Lead Product Designer I shaped the companion app end-to-end: the dual-purpose home, sleep and vitals analytics, the women's health module, and the safety layer — SOS, fake call, incident recording and area alerts.</p>
+      <p>The hardest problem wasn't data visualisation — it was tone. The same interface has to feel calm when you're checking your sleep score and instant when you're triggering an SOS. Two emotional registers, one design system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CHALLENGE -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">02 — The Challenge</p>
+    <h2 class="case-section__title">Health apps relax you. Safety apps alarm you. HALO must do both.</h2>
+    <div class="case-card-row">
+      <div class="case-card">
+        <span class="case-card__num">01</span>
+        <h3>Seconds matter in an emergency</h3>
+        <p>Safety features buried two menus deep are safety features that don't exist. SOS has to be reachable from anywhere, instantly, under stress.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">02</span>
+        <h3>Dense data, small screen</h3>
+        <p>Sleep stages, HRV, SpO2, cycles, steps — a ring generates constant data that must read at a glance, not as a spreadsheet.</p>
+      </div>
+      <div class="case-card">
+        <span class="case-card__num">03</span>
+        <h3>Sensitive by definition</h3>
+        <p>Cycle tracking, incident videos, live location — this app holds a person's most private data. Every screen has to earn trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DESIGN PRINCIPLES -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">03 — Design Principles</p>
+    <h2 class="case-section__title">Rules the interface never breaks.</h2>
+    <div class="case-goal-list">
+      <div class="case-goal">
+        <span class="case-goal__num">01</span>
+        <h3>SOS is never more than one tap away</h3>
+        <p>A persistent red action lives in the tab bar and on every safety surface — findable by muscle memory, usable in panic.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">02</span>
+        <h3>Red means emergency. Nothing else.</h3>
+        <p>The alarm colour is reserved exclusively for safety. Health data gets its own spectrum, so red always means act now.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">03</span>
+        <h3>Glanceable first, drillable second</h3>
+        <p>Every metric leads with one number and one trend. Charts and history live one tap deeper, never on the first screen.</p>
+      </div>
+      <div class="case-goal">
+        <span class="case-goal__num">04</span>
+        <h3>Privacy is a feature, not a setting</h3>
+        <p>Incident uploads are private by default, location is shared only on action, and cycle data never leaves the device unencrypted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ARCHITECTURE -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">04 — The Architecture</p>
+    <h2 class="case-section__title">Two jobs. One ring. One mental model.</h2>
+
+    <div class="case-persona-grid">
+      <div class="case-persona">
+        <span class="case-persona__tag">Your Health</span>
+        <h3>The quiet companion</h3>
+        <ul>
+          <li><strong>Sleep analysis</strong> — Stages, score and duration — a night in one view.</li>
+          <li><strong>Vitals</strong> — Heart rate, SpO2 and steps from the ring's sensors.</li>
+          <li><strong>Women's health</strong> — Cycle tracking with phase-aware guidance.</li>
+        </ul>
+      </div>
+      <div class="case-persona">
+        <span class="case-persona__tag">Your Safety</span>
+        <h3>The loud one, when it counts</h3>
+        <ul>
+          <li><strong>One-touch SOS</strong> — Alerts law enforcement with your live location.</li>
+          <li><strong>Fake call</strong> — A staged incoming call to exit a bad situation.</li>
+          <li><strong>Incident recording &amp; area alerts</strong> — Capture evidence; see verified alerts nearby.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 DESIGN SYSTEM -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">05 — Design System</p>
+    <h2 class="case-section__title">Black canvas. Colour as signal.</h2>
+    <p class="case-section__lede">On OLED black, every colour is information: red is reserved for emergency, and each vital owns a hue. Poppins keeps large numbers soft and readable at arm's length.</p>
+
+    <div class="case-type-grid" style="grid-template-columns: 1fr;">
+      <div class="case-type-card" style="max-width:504px;">
+        <p class="case-aa" style="font-family: 'Century Gothic', 'Poppins', 'Segoe UI', sans-serif;">79</p>
+        <p class="case-font-name">Poppins</p>
+        <p>The product's voice — geometric and friendly, so clinical data (79 BPM, 7h 57m, SpO2) never reads as clinical.</p>
+        <p class="case-glyphs">SemiBold · Medium · Regular — 0123456789</p>
+      </div>
+    </div>
+
+    <p class="case-palette-label">Palette</p>
+    <div class="case-swatch-row" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#E8382E;"></div>
+        <div class="case-swatch__info"><strong>SOS Red</strong><span>#E8382E</span><p style="margin:6px 0 0; font-size:.78rem; opacity:.65;">Emergency only — never decoration</p></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#F99420;"></div>
+        <div class="case-swatch__info"><strong>Sleep Orange</strong><span>#F99420</span><p style="margin:6px 0 0; font-size:.78rem; opacity:.65;">Sleep stages &amp; scores</p></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#4AC7E3;"></div>
+        <div class="case-swatch__info"><strong>Pulse Cyan</strong><span>#4AC7E3</span><p style="margin:6px 0 0; font-size:.78rem; opacity:.65;">Heart rate, SpO2, steps</p></div>
+      </div>
+      <div class="case-swatch">
+        <div class="case-swatch__chip" style="background:#ED429E; border-right:none;"></div>
+        <div class="case-swatch__info"><strong>Cycle Magenta</strong><span>#ED429E</span><p style="margin:6px 0 0; font-size:.78rem; opacity:.65;">Women's health module</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 THE HOME -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <div class="case-screen-row case-screen-row--reverse">
+      <div class="case-flow-image" style="max-width:300px; margin:0 auto;">
+        <img src="../assets/case-studies/halo/home.png" alt="HALO home screen showing the Your Safety emergency card above Your Health vitals">
+      </div>
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">06 — The Home</span>
+        <h3>Safety on top. Health below. SOS always.</h3>
+        <p style="margin-bottom:20px;">Hierarchy follows stakes: the emergency card leads the screen — you should never scroll to find help. Vitals follow in glanceable rows.</p>
+        <p style="margin-bottom:20px;"><strong>The red button in the dock.</strong> SOS sits centre of the tab bar on every screen, oversized and unmistakable — reachable with a thumb, in the dark.</p>
+        <p><strong>Content that meets the moment.</strong> Guides and videos surface below the fold, tuned to your health profile rather than a generic feed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 DEEP DIVE SAFETY -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">07 — Deep Dive · Safety</p>
+    <h2 class="case-section__title">Designed for the worst thirty seconds of someone's day.</h2>
+
+    <div class="case-flow-layout">
+      <div class="case-poster-list">
+        <div class="case-poster-item">
+          <h3>Trigger SOS</h3>
+          <p>One tap notifies law enforcement with live location. Confirmation is designed to prevent accidents without slowing real ones.</p>
+        </div>
+        <div class="case-poster-item">
+          <h3>Fake call</h3>
+          <p>Type any name and HALO stages an incoming call — a socially graceful exit from a situation that doesn't feel right.</p>
+        </div>
+        <div class="case-poster-item">
+          <h3>Record &amp; document</h3>
+          <p>Capture video from the incident screen or upload after; files stay private and timestamped for evidence.</p>
+        </div>
+        <div class="case-poster-item">
+          <h3>Alerts in your area</h3>
+          <p>A live map of verified nearby incidents — awareness without anxiety, on a deliberately dimmed basemap.</p>
+        </div>
+      </div>
+      <div style="display:flex; gap:20px; justify-content:center;">
+        <div class="case-flow-image" style="max-width:230px;">
+          <img src="../assets/case-studies/halo/safety-hub.png" alt="HALO safety screen with HALO Emergency card, Fake Call, Record an incident and Alerts in your area">
+        </div>
+        <div class="case-flow-image" style="max-width:230px;">
+          <img src="../assets/case-studies/halo/safety-controls.png" alt="HALO safety screen showing Trigger SOS, Phone a friend, Fake Call and the area alerts map">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 DEEP DIVE HEALTH -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">08 — Deep Dive · Health</p>
+    <h2 class="case-section__title">Clinical data, read at arm's length.</h2>
+
+    <div class="case-community-grid">
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/halo/sleep-analysis.png" alt="HALO sleep analysis screen showing sleep stages chart, sleep score and duration"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Sleep Analysis</span>
+          <h4>A night, told as a story</h4>
+          <p>Stages flow left to right like the night itself — REM, light and deep in warm oranges — with score and duration as the only numbers you must read.</p>
+        </div>
+      </div>
+      <div class="case-community-card">
+        <div class="case-community-card__shot"><img src="../assets/case-studies/halo/health-metrics.png" alt="HALO health metrics screen showing heart rate, SpO2, sleep, steps and menstrual cycle cards"></div>
+        <div class="case-community-card__body">
+          <span class="case-community-card__label">Health Metrics</span>
+          <h4>Five vitals, one glance</h4>
+          <p>Heart rate, SpO2, sleep, steps and cycle each own a card and a colour. Trends read from the shape of the chart before you read a single digit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 DEEP DIVE WOMEN'S HEALTH -->
+<section class="case-section">
+  <div class="container">
+    <div class="case-screen-row">
+      <div class="case-screen-row__text">
+        <span class="case-screen-row__label">09 — Deep Dive · Women's Health</span>
+        <h3>Cycle tracking that informs, never judges.</h3>
+        <p style="margin-bottom:20px;"><strong>Prediction with a calendar, not a countdown.</strong> "Period in 3 days" sits inside a week view you control — logging symptoms and periods takes two taps.</p>
+        <p style="margin-bottom:20px;"><strong>Phase-aware guidance.</strong> The app knows you're in the luteal phase and adjusts its advice — rest more, sleep earlier — in plain language.</p>
+        <p><strong>Private by architecture.</strong> Cycle data feeds on-device insights and nothing else. It is never used outside the module, and never shared.</p>
+      </div>
+      <div class="case-flow-image" style="max-width:300px; margin:0 auto;">
+        <img src="../assets/case-studies/halo/womens-health.png" alt="HALO women's health screen showing cycle calendar, phase guidance and period logging">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 OUTCOMES -->
+<section class="case-section case-section--alt">
+  <div class="container">
+    <p class="case-section__label">10 — Outcomes</p>
+    <h2 class="case-section__title">What the design is measured on.</h2>
+    <p class="case-note">Illustrative metrics — swap in real figures once you have them.</p>
+
+    <div class="case-stat-grid">
+      <div class="case-stat">
+        <strong>1.8s</strong>
+        <span>To trigger SOS</span>
+        <p>Median time from any screen, measured in usability tests.</p>
+      </div>
+      <div class="case-stat">
+        <strong>94%</strong>
+        <span>Glance success</span>
+        <p>Users reading a vital correctly within two seconds.</p>
+      </div>
+      <div class="case-stat">
+        <strong>76%</strong>
+        <span>Daily open rate</span>
+        <p>The health half earns the habit the safety half relies on.</p>
+      </div>
+      <div class="case-stat">
+        <strong>0</strong>
+        <span>Accidental SOS</span>
+        <p>False triggers across the entire test cohort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 REFLECTION -->
+<section class="case-section">
+  <div class="container">
+    <p class="case-section__label">11 — Reflection</p>
+    <h2 class="case-reflection-title">The best safety feature is the one you never notice — until the moment you need nothing else.</h2>
+    <div class="case-two-col">
+      <p>Designing for panic rewired how I think about hierarchy. Under stress, people don't read — they reach. Every safety decision came down to physical reachability and unmistakable colour, tested until finding SOS required no thought at all.</p>
+      <p>Reserving red for emergencies was the single highest-leverage system decision. It cost us a convenient error colour everywhere else — and bought an interface where one glance at red tells you exactly how serious things are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="case-footer">
+  <div class="container">
+    <div class="case-footer__top">
+      <h3 class="case-footer__thanks">Thanks for reading.</h3>
+      <div class="case-footer__contact">
+        <span>Lead Product Designer</span>
+        <a href="mailto:rahul077eisen@gmail.com">rahul077eisen@gmail.com</a>
+      </div>
+    </div>
+    <div class="case-nav-footer">
+      <a href="plantd.html" class="case-nav-footer__link">← Back: plantd</a>
+      <a href="../index.html#work" class="case-nav-footer__link">Back to Portfolio →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
