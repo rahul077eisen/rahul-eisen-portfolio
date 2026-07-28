@@ -334,7 +334,36 @@ ul { list-style: none; margin: 0; padding: 0; }
   overflow: hidden;
 }
 
+.hero-blobs {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-blob {
+  position: absolute;
+  background: var(--cream-2);
+}
+.hero-blob--1 {
+  width: 620px; height: 560px;
+  top: -220px; right: -140px;
+  border-radius: 58% 42% 53% 47% / 48% 55% 45% 52%;
+}
+.hero-blob--2 {
+  width: 460px; height: 420px;
+  top: 60px; left: -180px;
+  border-radius: 45% 55% 48% 52% / 55% 45% 58% 42%;
+}
+.hero-blob--3 {
+  width: 340px; height: 300px;
+  bottom: -140px; right: 12%;
+  border-radius: 50% 50% 42% 58% / 42% 55% 45% 58%;
+}
+
 .hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 48px;
