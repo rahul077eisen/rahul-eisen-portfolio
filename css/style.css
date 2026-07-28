@@ -344,21 +344,18 @@ ul { list-style: none; margin: 0; padding: 0; }
 .hero-blob {
   position: absolute;
   background: var(--cream-2);
+  filter: blur(55px);
+  opacity: 0.85;
 }
 .hero-blob--1 {
-  width: 620px; height: 560px;
-  top: -220px; right: -140px;
+  width: 720px; height: 640px;
+  top: -280px; right: -220px;
   border-radius: 58% 42% 53% 47% / 48% 55% 45% 52%;
 }
 .hero-blob--2 {
-  width: 460px; height: 420px;
-  top: 60px; left: -180px;
+  width: 580px; height: 520px;
+  top: 20px; left: -260px;
   border-radius: 45% 55% 48% 52% / 55% 45% 58% 42%;
-}
-.hero-blob--3 {
-  width: 340px; height: 300px;
-  bottom: -140px; right: 12%;
-  border-radius: 50% 50% 42% 58% / 42% 55% 45% 58%;
 }
 
 .hero__grid {
@@ -504,6 +501,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .polaroid--1 { bottom: -6%; left: 4%; }
 
 .marquee {
+  position: relative;
+  z-index: 2;
   border-top: var(--border-w) solid var(--ink);
   border-bottom: var(--border-w) solid var(--ink);
   background: var(--ink);
