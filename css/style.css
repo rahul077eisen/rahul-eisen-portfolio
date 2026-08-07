@@ -238,16 +238,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .logo__box {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  background: var(--ink);
-  color: var(--cream);
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: var(--border-w) solid var(--ink);
+  display: block;
+  width: 44px;
+  height: 44px;
 }
-.logo__box--sm { font-size: 1rem; padding: 6px 10px; }
-.dot { color: var(--purple-soft); }
+.logo__box--sm { width: 34px; height: 34px; }
 
 .nav-links {
   display: flex;
