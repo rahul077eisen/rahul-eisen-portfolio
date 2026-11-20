@@ -4,7 +4,7 @@
   <g transform="translate(24 29.4) scale(0.6)">
     <!-- top bar + bowl + leg + middle bar, bars rounded on the left -->
     <path d="M9 0 H74 A40 40 0 0 1 93.13 75.13 L120 102 H94.54 L52.54 60 H9 A9 9 0 0 1 9 42 H60 L79.34 61.34 A22 22 0 0 0 74 18 H9 A9 9 0 0 1 9 0 Z" fill="#F5F0E7"/>
-    <!-- bottom bar as the accent -->
-    <path d="M9 84 H51.08 L69.08 102 H9 A9 9 0 0 1 9 84 Z" fill="#D9FA4C"/>
+    <!-- dot in place of the third bar -->
+    <circle cx="11" cy="91" r="11" fill="#D9FA4C"/>
   </g>
 </svg>
