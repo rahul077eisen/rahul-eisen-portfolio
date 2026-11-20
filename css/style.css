@@ -239,10 +239,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .logo__box {
   display: block;
-  width: auto;
-  height: 34px;
+  width: 46px;
+  height: 46px;
 }
-.logo__box--sm { width: auto; height: 24px; }
+.logo__box--sm { width: 36px; height: 36px; }
 
 .nav-links {
   display: flex;

@@ -1,6 +1,10 @@
-<svg width="120" height="102" viewBox="0 0 120 102" xmlns="http://www.w3.org/2000/svg" fill="#5B3FE0">
-  <!-- top bar + bowl + leg + middle bar -->
-  <path d="M0 0 H74 A40 40 0 0 1 93.13 75.13 L120 102 H94.54 L52.54 60 H0 V42 H60 L79.34 61.34 A22 22 0 0 0 74 18 H0 Z"/>
-  <!-- bottom bar, cut parallel to the leg -->
-  <path d="M0 84 H51.08 L69.08 102 H0 Z"/>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- backdrop -->
+  <rect width="120" height="120" rx="28" fill="#5B3FE0"/>
+  <g transform="translate(24 29.4) scale(0.6)">
+    <!-- top bar + bowl + leg + middle bar, bars rounded on the left -->
+    <path d="M9 0 H74 A40 40 0 0 1 93.13 75.13 L120 102 H94.54 L52.54 60 H9 A9 9 0 0 1 9 42 H60 L79.34 61.34 A22 22 0 0 0 74 18 H9 A9 9 0 0 1 9 0 Z" fill="#F5F0E7"/>
+    <!-- bottom bar as the accent -->
+    <path d="M9 84 H51.08 L69.08 102 H9 A9 9 0 0 1 9 84 Z" fill="#D9FA4C"/>
+  </g>
 </svg>
